@@ -4,13 +4,13 @@
 
 This document outlines a required manual patch to run the `Codesage-base-v2` model within the `CodeRagBench` framework.
 
-## The Problem
+### The Problem
 
 The `CodeRagBench` benchmark fails to load the `Codesage-base-v2` model using the default `beir` library. The model requires the `trust_remote_code=True` flag to be set during initialization, which the library does not do by default.
 
 ---
 
-## The Patch
+### The Patch
 
 To resolve this, a direct modification was made to the conda environment's installed library file.
 
@@ -32,7 +32,7 @@ To resolve this, a direct modification was made to the conda environment's insta
 
 ---
 
-## ⚠️ Important
+### ⚠️ Important
 
 This is a **manual override** applied directly to a file within an installed package.
 
