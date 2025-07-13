@@ -1,8 +1,10 @@
 *
 !/.gitignore
+!/readme.md
 !/retrieval/
 !/retrieval/**
 
 !/CodeRagBench/
 !/CodeRagBench/**
-!/miniconda3/envs/crag/lib/python3.10/site-packages/beir/retrieval/models/sentence_bert.py
+!/random_scripts/
+!/random_scripts/**
