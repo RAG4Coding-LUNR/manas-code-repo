@@ -1,4 +1,4 @@
-# README: This README contains a list of patches made to get various experiments to work
+# README: This README contains a list of patches (Look at: random_scripts) made to get various experiments to work
 
 ## CodeSage Model Patch for `sentence_bert.py`
 
