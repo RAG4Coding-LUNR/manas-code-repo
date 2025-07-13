@@ -1,6 +1,6 @@
-# This README contains a list of patches made to get various experiments to work
+# README: This README contains a list of patches made to get various experiments to work
 
-## README: CodeSage Model Patch for `sentence_bert.py`
+## CodeSage Model Patch for `sentence_bert.py`
 
 This document outlines a required manual patch to run the `Codesage-base-v2` model within the `CodeRagBench` framework.
 
