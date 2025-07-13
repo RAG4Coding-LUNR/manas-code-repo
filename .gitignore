@@ -2,3 +2,6 @@
 !/.gitignore
 !/retrieval/
 !/retrieval/**
+
+!/CodeRagBench/
+!/CodeRagBench/**
