@@ -1,3 +1,4 @@
 *
 !/.gitignore
-!.retreival/
+!/.retrieval/
+!/.retrieval/**
