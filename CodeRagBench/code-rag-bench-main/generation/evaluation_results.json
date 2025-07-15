@@ -1,6 +1,6 @@
 {
-  "mbpp": {
-    "pass@1": 0.528
+  "odex-en": {
+    "pass@1": 0.26
   },
   "config": {
     "prefix": "",
@@ -14,23 +14,23 @@
     "seed": 0,
     "remove_linebreak": false,
     "model_backend": "hf",
-    "model": "./qwen2.5-coder-CAFT",
+    "model": "unsloth/Qwen2.5-Coder-7B-Instruct",
     "modeltype": "causal",
     "peft_model": null,
     "revision": null,
     "token": null,
     "trust_remote_code": false,
-    "tasks": "mbpp",
+    "tasks": "odex-en",
     "instruction_tokens": null,
     "batch_size": 1,
     "max_length_input": 4096,
-    "max_length_generation": 6000,
+    "max_length_generation": 5120,
     "topk_docs": 5,
     "precision": "bf16",
     "load_in_8bit": false,
     "load_in_4bit": false,
     "left_padding": false,
-    "limit": null,
+    "limit": 100,
     "limit_start": 0,
     "save_every_k_tasks": -1,
     "postprocess": true,
@@ -50,15 +50,15 @@
     "check_references": false,
     "dataset_path": "json",
     "dataset_name": null,
-    "data_files_test": "/home/avisingh/CodeRagBench/code-rag-bench-main/retrieval/mbpp_codesage_generation.json",
+    "data_files_test": "/home/avisingh/CodeRagBench/code-rag-bench-main/retrieval/odex_codesage_generation.json",
     "cache_dir": null,
     "model_cache_dir": null,
     "setup_repoeval": false,
     "repoeval_input_repo_dir": "../retrieval/output/repoeval/repositories/function_level",
     "repoeval_cache_dir": "scripts/repoeval",
     "data_files": {
-      "test": "/home/avisingh/CodeRagBench/code-rag-bench-main/retrieval/mbpp_codesage_generation.json"
+      "test": "/home/avisingh/CodeRagBench/code-rag-bench-main/retrieval/odex_codesage_generation.json"
     },
-    "tokenizer": "./qwen2.5-coder-CAFT"
+    "tokenizer": "unsloth/Qwen2.5-Coder-7B-Instruct"
   }
 }

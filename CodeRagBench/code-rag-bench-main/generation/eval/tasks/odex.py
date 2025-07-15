@@ -64,7 +64,7 @@ class GeneralODEX(Task):
 
     def get_dataset(self):
         """Returns dataset for the task or an iterable of any object, that get_prompt can handle"""
-        return self.dataset["train"]
+        return self.dataset["test"]
 
     def get_prompt(self, doc, return_dict: bool = False):
         """Builds the prompt for the LM to generate from."""

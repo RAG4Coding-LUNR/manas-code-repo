@@ -32,6 +32,8 @@ with open(parser.input_corpus_csv, "r", newline='') as f:
     for row in tqdm(iterable=reader,total=110646):
         corpus.append(row["Document"])
 
+# 10k from the  50k from instruction.csv
+
 corpus_embeddings = embedder.encode(corpus, convert_to_tensor=True, show_progress_bar=True,batch_size=512)
 
 print("Embedded corpus...")

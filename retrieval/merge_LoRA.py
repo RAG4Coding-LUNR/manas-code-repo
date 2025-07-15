@@ -7,7 +7,7 @@ import os
 # --- Configuration ---
 # NOTE: We use the original Hugging Face model name here, NOT the unsloth version.
 # This is crucial for using the standard transformers library correctly.
-base_model_name = "unsloth/Qwen2.5-Coder-7B-Instruct" 
+base_model_name = "unsloth/codellama-7b" 
 
 # The path to your saved LoRA adapter
 adapter_path = "./qwen2.5-finetuned"

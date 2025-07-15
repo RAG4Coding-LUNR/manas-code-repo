@@ -8,3 +8,6 @@
 !/CodeRagBench/**
 !/random_scripts/
 !/random_scripts/**
+CodeRagBench/code-rag-bench-main/out.log
+CodeRagBench/code-rag-bench-main/generation/out_1.log
+CodeRagBench/code-rag-bench-main/generation/out.log
