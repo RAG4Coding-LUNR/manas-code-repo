@@ -12,7 +12,7 @@ training_sample_df = df.sample(n=10000, random_state=42)
 training_sample_df.to_csv('/home/avisingh/datasets/training_data_sampled_10k.csv', index=False)
 
 print("Successfully sampled 10,000 rows and saved to 'training_data_sampled_10k.csv'")
-
+'''
 # --- Second, Formatted Sample (50k rows) ---
 
 # Create a new DataFrame that excludes the rows already sampled.
@@ -44,3 +44,4 @@ final_df = final_df[['ID', 'Document', 'Source']]
 final_df.to_csv('/home/avisingh/datasets/corpus_instruction_formatted_50k.csv', index=False)
 
 print("Successfully created formatted 50k sample and saved to 'validation_data_formatted_50k.csv'")
+'''

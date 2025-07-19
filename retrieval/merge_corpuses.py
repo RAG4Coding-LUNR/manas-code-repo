@@ -20,4 +20,4 @@ total_rows = len(merged_df)
 print(f"The merged data has been saved to '{output_file_path}'")
 print(f"Total rows in the final file: {total_rows}")
 
-# Size of corpus_final.csv 160646
+# Size of corpus_final.csv 160646 -> After chunking -> 477591

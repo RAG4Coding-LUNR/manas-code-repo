@@ -11,3 +11,5 @@
 CodeRagBench/code-rag-bench-main/out.log
 CodeRagBench/code-rag-bench-main/generation/out_1.log
 CodeRagBench/code-rag-bench-main/generation/out.log
+retrieval/unsloth_compiled_cache/
+retrieval/unsloth_compiled_cache/**

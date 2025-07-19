@@ -1,12 +1,0 @@
-nohup: ignoring input
---- Starting Robust Merge Process ---
-This will be slower and use more memory, but is more reliable.
-
-[1/5] Loading base model 'unsloth/Qwen2.5-Coder-7B-Instruct'...
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.21it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.23it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.31it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.89it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.60it/s]
-[2/5] Loading tokenizer...
-[3/5] Applying adapter from './qwen2.5-finetuned'...
-[4/5] Merging adapter weights...
-[5/5] Saving final model to './qwen2.5-coder-CAFT'...
-
-✅ PROCESS COMPLETE. The model in '{output_path}' should now be correct.

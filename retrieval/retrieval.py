@@ -14,10 +14,10 @@ csv.field_size_limit(sys.maxsize)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', default="codesage/codesage-base-v2", help="sentence-transformer model for the retriever LM.")
-parser.add_argument('--input_corpus_csv', default="corpus.csv", help="Input CSV file to use as corpus for retriever.")
-parser.add_argument('--input_query_csv', default="instruction.csv", help="Input CSV file to use as queries for retriever.")
+parser.add_argument('--input_corpus_csv', default="/home/avisingh/datasets/corpus_final_chunked.csv", help="Input CSV file to use as corpus for retriever.")
+parser.add_argument('--input_query_csv', default="/home/avisingh/datasets/training_data_sampled_10k.csv", help="Input CSV file to use as queries for retriever.")
 parser.add_argument('--top_k', default=10, help="Number of documents to retrieve.")
-parser.add_argument('--output_csv', default="context_prompt.csv", help="CSV file to save the output in.")
+parser.add_argument('--output_csv', default="/home/avisingh/datasets/context_prompt_v2.csv", help="CSV file to save the output in.")
 parser = parser.parse_args()
 
 start_time = time.perf_counter()
@@ -29,7 +29,7 @@ print("Loaded embedding model...")
 corpus = []
 with open(parser.input_corpus_csv, "r", newline='') as f:
     reader = csv.DictReader(f)
-    for row in tqdm(iterable=reader,total=110646):
+    for row in tqdm(iterable=reader,total=477591):
         corpus.append(row["Document"])
 
 # 10k from the  50k from instruction.csv
@@ -41,7 +41,7 @@ print("Embedded corpus...")
 queries = []
 with open(parser.input_query_csv, "r", newline='') as f:
     reader = csv.DictReader(f)
-    for row in tqdm(iterable=reader,total=487008):
+    for row in tqdm(iterable=reader,total=10000):
         queries.append(row["Prompt"])
 
 all_res = []
@@ -50,8 +50,8 @@ print("Embedded queries...")
 
 print("Performing semantic search...")
 for i, (query,query_embedding) in enumerate(zip(queries, query_embeddings)):
-    if (i%10000==0):
-        print("Finished Query: " + str(i) + "/487008")
+    if (i%1000==0):
+        print("Finished Query: " + str(i) + "/10000")
     hits = util.semantic_search(query_embedding, corpus_embeddings, top_k=int(parser.top_k))
     hits = hits[0]      #Get the hits for the first query
     res = {"id":i, "query":query}
