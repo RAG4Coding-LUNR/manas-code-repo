@@ -60,7 +60,6 @@ class MBPP(Task):
         MBPP prompt is built following to InCoder (Fried et al.) approach
         prompt = docstring that includes one test
         """
-        # add test cases to indicate the name of the function to be generated
         test_example = '\n'.join([f"{test}" for test in doc["test_list"]])
         prompt = f"# {doc['text']}\nTest cases:\n" + test_example + '\nCode:'
 

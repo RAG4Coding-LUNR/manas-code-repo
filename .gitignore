@@ -14,3 +14,10 @@ CodeRagBench/code-rag-bench-main/generation/out.log
 retrieval/unsloth_compiled_cache/
 retrieval/unsloth_compiled_cache/**
 retrieval/out_mbpp.log
+retrieval/wandb/
+retrieval/wandb/**
+CodeRagBench/code-rag-bench-main/generation/eval/__pycache__/
+CodeRagBench/code-rag-bench-main/generation/eval/__pycache__/**
+CodeRagBench/code-rag-bench-main/generation/eval/tasks/__pycache__/
+CodeRagBench/code-rag-bench-main/generation/eval/tasks/__pycache__/**
+retrieval/notif_test.py

@@ -1,6 +1,6 @@
 {
   "odex-en": {
-    "pass@1": 0.26
+    "pass@1": 0.27107061503416857
   },
   "config": {
     "prefix": "",
@@ -14,7 +14,7 @@
     "seed": 0,
     "remove_linebreak": false,
     "model_backend": "hf",
-    "model": "unsloth/Qwen2.5-Coder-7B-Instruct",
+    "model": "unsloth/codellama-7b",
     "modeltype": "causal",
     "peft_model": null,
     "revision": null,
@@ -23,14 +23,14 @@
     "tasks": "odex-en",
     "instruction_tokens": null,
     "batch_size": 1,
-    "max_length_input": 4096,
-    "max_length_generation": 5120,
+    "max_length_input": 3072,
+    "max_length_generation": 3584,
     "topk_docs": 5,
     "precision": "bf16",
     "load_in_8bit": false,
     "load_in_4bit": false,
     "left_padding": false,
-    "limit": 100,
+    "limit": null,
     "limit_start": 0,
     "save_every_k_tasks": -1,
     "postprocess": true,
@@ -59,6 +59,6 @@
     "data_files": {
       "test": "/home/avisingh/CodeRagBench/code-rag-bench-main/retrieval/odex_codesage_generation.json"
     },
-    "tokenizer": "unsloth/Qwen2.5-Coder-7B-Instruct"
+    "tokenizer": "unsloth/codellama-7b"
   }
 }

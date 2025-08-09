@@ -1,19 +1,15 @@
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
-import json
-import os
 
 # --- Configuration ---
-# NOTE: We use the original Hugging Face model name here, NOT the unsloth version.
-# This is crucial for using the standard transformers library correctly.
 base_model_name = "unsloth/codellama-7b" 
 
 # The path to your saved LoRA adapter
-adapter_path = "./qwen2.5-finetuned"
+adapter_path = "/home/avisingh/models/codellama-RAG-v5-wo-chat"
 
 # The directory to save the final, correct model
-output_path = "./qwen2.5-coder-CAFT"
+output_path = "/home/avisingh/models/codellama-RAG-v5-wo-chat-complete"
 
 print("--- Starting Robust Merge Process ---")
 print(f"This will be slower and use more memory, but is more reliable.")
@@ -42,4 +38,4 @@ print(f"[5/5] Saving final model to '{output_path}'...")
 merged_model.save_pretrained(output_path)
 tokenizer.save_pretrained(output_path)
 
-print("\n✅ PROCESS COMPLETE. The model in '{output_path}' should now be correct.")
+print("\n✅ PROCESS COMPLETE.")
